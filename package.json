@@ -1,8 +1,8 @@
 {
   "name": "snippet-saver",
   "displayName": "snippet-saver",
-  "description": "A VS Code extension to save and manage code snippets.",
-  "version": "1.0.1",
+  "description": "An extension to save and manage code snippets on device.",
+  "version": "1.0.2",
   "publisher": "Aditya-Singh-Vats",
   "repository": {
     "type": "git",
