@@ -2,6 +2,8 @@
 
 Snippet-saver is a vscode extension tool, which relies on local storage of your device to provide create, read and delete functionality for code snippets. I have made this extension because I don't trust anyone with my code files and want to keep it in my local machine and I believe you should not trust anyone else for your personal data as well.
 
+![Feature Preview](assets/demo.png)
+
 ## Usage Explained
 https://github.com/user-attachments/assets/d30ea24e-bfc0-401d-9812-c4667c950e54
 
