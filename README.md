@@ -5,17 +5,38 @@ Snippet-saver is a vscode extension tool, which relies on local storage of your 
 ![Feature Preview](assets/demo.png)
 
 ## Usage Explained
+
 https://github.com/user-attachments/assets/d30ea24e-bfc0-401d-9812-c4667c950e54
 
 ## Features
+
 - Open-Source, you can build it directly from the Github repository.
-- Copy the snippets and save.
-- Insert the snippet at the cursor.
-- Delete any specific snippet from list.
 - Open Command Palette `ctrl+shift+p`.
 - Save snippet `snippet-saver.saveSnippet`.
 - Insert snippet `snippet-saver.insertSnippet`.
 - Delete snippet `snippet-saver.deleteSnippet`.
+- 💾 Save selected code as snippets.
+- 🔍 Auto-complete snippets using `@snippetname`.
+- 📝 Preview snippets before inserting.
+- 🗑️ Manage and delete snippets.
+- 💼 Workspace-specific snippets (saved in `.vscode/snippets.json`).
+
+## Usage
+
+### Save a Snippet
+
+1. Select code in the editor
+2. Press `Ctrl+Shift+P` → "Save code as snippet"
+3. Enter a snippet name
+
+### Insert a Snippet
+
+- **Auto-complete**: Type `@` followed by snippet name
+- **Command**: `Ctrl+Shift+P` → "Insert saved snippet"
+
+### Delete a Snippet
+
+- `Ctrl+Shift+P` → "Delete saved snippet"
 
 ## Requirements
 
@@ -25,19 +46,25 @@ https://github.com/user-attachments/assets/d30ea24e-bfc0-401d-9812-c4667c950e54
 
 - The update functionality is not yet implemented because of storage error.
 
+## Requirements
+
+VS Code version 1.98.0 or higher
+
 ## Release Notes
 
-- Version 1.0.0 -> Initial release with important functionality working.
+### 1.0.4
 
-### v1.0.0
+- Added @ auto-completion
+- Improved snippet preview
+- Bug fixes
 
-- Initial release of snippet-saver.
 ### TL;DR
+
 - I won't be adding any functionality which depends on a LLM or any external APIs, as it will be against my product policy of preserving privacy.
 
 ### For more information
 
-* [My Github Profile](https://github.com/Adityasinghvats)
-* [My Portfolio](https://aditya.webhop.me/)
+- [My Github Profile](https://github.com/Adityasinghvats)
+- [My Portfolio](https://aditya.webhop.me/)
 
 **Enjoy!**

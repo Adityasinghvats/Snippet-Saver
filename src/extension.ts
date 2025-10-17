@@ -1,19 +1,11 @@
 import * as vscode from 'vscode';
 import * as fs from 'fs';
-import * as path from "path";
 import { completionProvider, getSnippetsFilePath, loadSnippets } from './completionprovider';
 
-// This method is called when your extension is activated
-// Your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
 	console.log('Congratulations, your extension "snippet-saver" is now active!');
 	context.subscriptions.push(completionProvider(context));
 	const disposable = vscode.commands.registerCommand('snippet-saver.saveSnippet', async () => {
-		// The code you place here will be executed every time your command is executed
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from snippet-saver!');
 		const editor = vscode.window.activeTextEditor;
 		if (editor) {
 			const selection = editor.selection;
@@ -83,7 +75,7 @@ export function activate(context: vscode.ExtensionContext) {
 		if (snippetNames.length === 0) {
 			vscode.window.showInformationMessage('No snippets available.');
 		}
-		//dropdown kind of mwnu to select name
+		//dropdown kind of menu to select name
 		const snippetName = await vscode.window.showQuickPick(snippetNames,
 			{ placeHolder: 'Select a snippet to insert' }
 		);
@@ -100,7 +92,6 @@ export function activate(context: vscode.ExtensionContext) {
 	const deleteDisposable = vscode.commands.registerCommand('snippet-saver.deleteSnippet', async () => {
 		const snippetsFilePath = getSnippetsFilePath(context);
 		let snippets = await loadSnippets(context);
-
 		try {
 			const snippetNames = Object.keys(snippets);
 			if (snippetNames.length === 0) {
@@ -118,14 +109,12 @@ export function activate(context: vscode.ExtensionContext) {
 					vscode.window.showErrorMessage(`Error writing to snippets file: ${error.message}`);
 				}
 			}
-
 		} catch (error: any) {
 			if (error.code !== 'ENOENT') {
 				vscode.window.showErrorMessage(`Error reading snippets file: ${error.message}`);
 				return;
 			}
 		}
-
 	});
 	context.subscriptions.push(deleteDisposable);
 }
