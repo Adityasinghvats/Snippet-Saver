@@ -2,7 +2,7 @@
   "name": "snippet-saver",
   "displayName": "snippet-saver",
   "description": "An extension to save and manage code snippets on device.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "Aditya-Singh-Vats",
   "repository": {
     "type": "git",
@@ -35,7 +35,6 @@
       }
     ]
   },
-  
   "scripts": {
     "vscode:prepublish": "npm run compile",
     "compile": "tsc -p ./",
